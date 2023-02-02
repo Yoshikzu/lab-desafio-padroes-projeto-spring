@@ -45,7 +45,6 @@ public class ClienteServiceImpl implements ClienteService {
 
     @Override
     public void atualizar(Long id, Cliente cliente) {
-        // Buscar Cliente por ID, caso exista:
         Optional<Cliente> clienteBd = clienteRepository.findById(id);
         if (clienteBd.isPresent()) {
             salvarClienteComCep(cliente);
