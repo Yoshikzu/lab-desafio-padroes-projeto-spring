@@ -37,7 +37,7 @@ public class ClienteServiceImpl implements ClienteService {
         Optional<Cliente> cliente = clienteRepository.findById(id);
         return cliente.get();
     }
-
+    
     @Override
     public void inserir(Cliente cliente) {
         salvarClienteComCep(cliente);
